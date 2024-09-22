@@ -1,0 +1,97 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alinea el contenido de arriba hacia abajo */
+    height: 100vh;
+    background-color: #fef9e7; /* Color similar al fondo de la imagen */
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+/* Estilos para el texto animado en la primera ventana */
+h1 {
+    font-size: 2em;
+    color: #ff6347; /* Color del texto */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.animate-text {
+    animation: moveText 2s infinite alternate;
+}
+
+@keyframes moveText {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+/* Botón estilizado para la primera ventana */
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para las imágenes de confeti */
+.confetti {
+    position: absolute;
+    width: 50px; /* Tamaño de las imágenes */
+    height: 50px;
+    animation: fadeInOut 15s infinite ease-in-out; /* Efecto suave */
+    opacity: 0;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    30% { opacity: 1; }  /* Se mantiene visible por más tiempo */
+    70% { opacity: 1; }  /* Mantener visible */
+    100% { opacity: 0; } /* Desvanecimiento suave y lento */
+}
+
+/* Ajuste de la imagen para que se vea bien en diferentes pantallas */
+img {
+    max-width: 80%; /* Limita el ancho al 80% del viewport */
+    max-height: 60vh; /* Limita la altura al 60% de la pantalla */
+    width: auto;
+    height: auto;
+    margin: auto;
+    object-fit: contain; /* Ajusta la imagen sin distorsionar */
+}
+
+/* Estilo para el botón "Te dedico esta canción" en la segunda ventana */
+.btn-song {
+    background-color: #007bff; /* Color celeste */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px; /* Separación con la imagen */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-song:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+}
+
+
+
